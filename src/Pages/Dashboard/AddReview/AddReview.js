@@ -11,7 +11,7 @@ const AddReview = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         const reviewData = { ...data, name: user.displayName, email: user.email }
-        fetch("https://fathomless-sands-04290.herokuapp.com/review", {
+        fetch("http://localhost:5000/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

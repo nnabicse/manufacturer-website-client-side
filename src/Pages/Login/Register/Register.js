@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useUpdateProfile, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
@@ -34,14 +34,14 @@ const Register = () => {
             timer: 1500
         })
     }
-    if (loadingCreate) {
+    if (loadingCreate || updating) {
         return <Loading></Loading>
     }
 
     let errorElement;
-    if (errorCreate) {
+    if (errorCreate || updateError) {
         errorElement = <div>
-            <p className='text-danger'>Error: {errorCreate?.message}</p>
+            <p className='text-danger'>Error: {errorCreate?.message || updateError?.message}</p>
         </div>
     }
 
@@ -52,14 +52,6 @@ const Register = () => {
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name })
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Successfully Registerd',
-            showConfirmButton: false,
-            timer: 1500
-        })
-
     }
 
     const navigateLogin = event => {

@@ -4,7 +4,8 @@ import googleLogo from '../../../images/googleLogo.png'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import './SocialLogin.css'
-// import useToken from '../../../hooks/useToken';
+import useToken from '../../../hooks/useToken';
+import Loading from '../Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
@@ -19,10 +20,14 @@ const SocialLogin = () => {
         </div>
     }
 
-    // const [token] = useToken(userGoogle);
-    // if (token) {
-    //     navigate(from, { replace: true });
-    // }
+    const [token] = useToken(userGoogle);
+    if (token) {
+        navigate(from, { replace: true });
+    }
+
+    if (loadingGoogle) {
+        <Loading></Loading>
+    }
     return (
         <div>
             <div className='d-flex align-items-center'>

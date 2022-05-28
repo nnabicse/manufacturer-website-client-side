@@ -19,7 +19,7 @@ const ManageUser = ({ currentUser, index, refetch }) => {
             confirmButtonText: 'Yes, Make Admin!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://fathomless-sands-04290.herokuapp.com/alluser/admin/${currentUser.email}`, {
+                fetch(`http://localhost:5000/alluser/admin/${currentUser.email}`, {
                     method: "PATCH",
                     headers: {
                         "content-type": "application/json",
@@ -47,36 +47,6 @@ const ManageUser = ({ currentUser, index, refetch }) => {
         })
     }
 
-    // const deleteUser = () => {
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You won't be able to revert this!",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Yes, delete it!'
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             fetch(`https://fathomless-sands-04290.herokuapp.com/alluser/${user.email}`, {
-    //                 method: "DELETE",
-    //                 headers: {
-    //                     "content-type": "application/json",
-    //                     authorization: `Bearer ${localStorage.getItem("accessToken")}`
-    //                 }
-    //             })
-    //                 .then(res => res.json())
-    //                 .then(
-    //                     Swal.fire(
-    //                         'Deleted!',
-    //                         'Your file has been deleted.',
-    //                         'success'
-    //                     )
-    //                 )
-    //             refetch()
-    //         }
-    //     })
-    // }
     if (loading) {
         <Loading></Loading>
     }

@@ -6,7 +6,7 @@ import Loading from '../../../Login/Loading/Loading';
 import './ManageUsers.css'
 
 const ManageUsers = () => {
-    const { data: users, isLoading, refetch } = useQuery("users", () => fetch(`https://fathomless-sands-04290.herokuapp.com/alluser`, {
+    const { data: users, isLoading, refetch } = useQuery("users", () => fetch(`http://localhost:5000/alluser`, {
         method: "GET",
         headers: {
             "content-type": "application/json",

@@ -251,7 +251,7 @@ const MyPortfolio = () => {
                                 <h5 className='title'>NNabi Printing Parts Manufacturer Ltd.</h5>
                                 <span>React JS, JavaScript, React Bootstrap, Firebase, MongoDb, Node, Express</span><br />
                                 <div className='project-button-container'>
-                                    <a href='nnabippml.firebaseapp.com' className='btn btn-primary w-100'>Live</a>
+                                    <a href='https://nnabippml.web.app/myportfolio' className='btn btn-primary w-100'>Live</a>
                                     <button className='btn btn-primary w-100'>Github</button>
                                 </div>
                             </div>

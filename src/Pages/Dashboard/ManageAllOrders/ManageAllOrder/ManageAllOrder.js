@@ -6,7 +6,7 @@ const ManageAllOrder = ({ order, index, refetch }) => {
 
 
     const handleShipment = () => {
-        fetch(`https://fathomless-sands-04290.herokuapp.com/allorder`, {
+        fetch(`http://localhost:5000/allorder`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

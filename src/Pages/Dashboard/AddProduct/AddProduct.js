@@ -32,7 +32,7 @@ const AddProduct = () => {
             image: image
         }
 
-        fetch("https://fathomless-sands-04290.herokuapp.com/product", {
+        fetch("http://localhost:5000/product", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -42,7 +42,8 @@ const AddProduct = () => {
 
         }).then(res => res.json())
             .then(data => {
-                if (data.acknowledged === "true") {
+                console.log(data)
+                if (data.acknowledged === true) {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
@@ -52,7 +53,6 @@ const AddProduct = () => {
                     })
                 }
             })
-            .then()
 
     }
 

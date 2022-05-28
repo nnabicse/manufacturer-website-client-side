@@ -19,7 +19,7 @@ const Purchase = () => {
     const [orderQuantity, setOrderQuantity] = useState(0)
     useEffect(() => {
         if (user) {
-            fetch(`https://fathomless-sands-04290.herokuapp.com/product/${id}`, {
+            fetch(`http://localhost:5000/product/${id}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("accessToken")}`
                 }
@@ -61,7 +61,7 @@ const Purchase = () => {
             buyerName: user.displayName, totalCost: amount, orderQty: orderQuantity, isPaid, phone, adress, shipment
         }
 
-        fetch("https://fathomless-sands-04290.herokuapp.com/order", {
+        fetch("http://localhost:5000/order", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -72,7 +72,7 @@ const Purchase = () => {
         }).then(res => res.json())
 
 
-        fetch("https://fathomless-sands-04290.herokuapp.com/product", {
+        fetch("http://localhost:5000/product", {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -165,7 +165,7 @@ const Purchase = () => {
             </div>
 
 
-        </div>
+        </div >
     );
 };
 

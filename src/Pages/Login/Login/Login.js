@@ -30,7 +30,7 @@ const Login = () => {
     if (token) {
         navigate(from, { replace: true });
     }
-    if (loading) {
+    if (loading || sending) {
         return <Loading></Loading>;
     }
     let errorElement;
@@ -44,15 +44,17 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://fathomless-sands-04290.herokuapp.com/login', { email });
+        const { data } = await axios.post('http://localhost:5000/login', { email });
         localStorage.setItem('accessToken', data.accessToken)
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Login Successfull',
-            showConfirmButton: false,
-            timer: 1500
-        })
+        if (data.accessToken) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Login Successfull',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
     }
 
 

@@ -6,7 +6,7 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 const ManageProducts = () => {
     const [products, setProducts] = useState();
     useEffect(() => {
-        fetch(`https://fathomless-sands-04290.herokuapp.com/product`, {
+        fetch(`http://localhost:5000/product`, {
             method: "GET",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`

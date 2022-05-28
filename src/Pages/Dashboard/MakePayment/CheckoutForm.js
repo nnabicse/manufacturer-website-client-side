@@ -15,7 +15,7 @@ const CheckoutForm = ({ order }) => {
     const [transactionId, setTransactionId] = useState('');
 
     useEffect(() => {
-        fetch('https://fathomless-sands-04290.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -89,7 +89,7 @@ const CheckoutForm = ({ order }) => {
 
 
 
-            fetch(`https://fathomless-sands-04290.herokuapp.com/allorder/${order._id}`, {
+            fetch(`http://localhost:5000/allorder/${order._id}`, {
                 method: "PATCH",
                 headers: {
                     "content-type": "application/json",
