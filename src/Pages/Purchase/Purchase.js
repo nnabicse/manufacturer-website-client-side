@@ -19,7 +19,7 @@ const Purchase = () => {
     const [orderQuantity, setOrderQuantity] = useState(0)
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/product/${id}`, {
+            fetch(`https://limitless-plateau-33448.herokuapp.com/product/${id}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("accessToken")}`
                 }
@@ -61,7 +61,7 @@ const Purchase = () => {
             buyerName: user.displayName, totalCost: amount, orderQty: orderQuantity, isPaid, phone, adress, shipment
         }
 
-        fetch("http://localhost:5000/order", {
+        fetch("https://limitless-plateau-33448.herokuapp.com/order", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -72,7 +72,7 @@ const Purchase = () => {
         }).then(res => res.json())
 
 
-        fetch("http://localhost:5000/product", {
+        fetch("https://limitless-plateau-33448.herokuapp.com/product", {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

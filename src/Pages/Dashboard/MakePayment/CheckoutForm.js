@@ -15,7 +15,7 @@ const CheckoutForm = ({ order }) => {
     const [transactionId, setTransactionId] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://limitless-plateau-33448.herokuapp.com/create-payment-intent', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -89,7 +89,7 @@ const CheckoutForm = ({ order }) => {
 
 
 
-            fetch(`http://localhost:5000/allorder/${order._id}`, {
+            fetch(`https://limitless-plateau-33448.herokuapp.com/allorder/${order._id}`, {
                 method: "PATCH",
                 headers: {
                     "content-type": "application/json",
@@ -104,10 +104,6 @@ const CheckoutForm = ({ order }) => {
 
         }
 
-    }
-
-    if (processing) {
-        return <Loading></Loading>
     }
 
     return (

@@ -16,7 +16,7 @@ const Profile = () => {
     const companyRef = useRef()
     const [user, loading] = useAuthState(auth)
 
-    const { isLoading, error, data, refetch } = useQuery("currentUser", () => fetch(`http://localhost:5000/user/?email=${user?.email}`, {
+    const { isLoading, error, data, refetch } = useQuery("currentUser", () => fetch(`https://limitless-plateau-33448.herokuapp.com/user/?email=${user?.email}`, {
         headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`
         }
@@ -58,7 +58,7 @@ const Profile = () => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/user/?email=${user.email}`, {
+                    fetch(`https://limitless-plateau-33448.herokuapp.com/user/?email=${user.email}`, {
                         method: "PATCH",
                         headers: {
                             "content-type": "application/json",

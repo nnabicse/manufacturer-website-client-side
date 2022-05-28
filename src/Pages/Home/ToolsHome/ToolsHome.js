@@ -8,7 +8,7 @@ import './ToolsHome.css';
 const ToolsHome = () => {
     const navigate = useNavigate();
     const { isLoading, error, data } = useQuery('tools', () =>
-        fetch('http://localhost:5000/product').then(res =>
+        fetch('https://limitless-plateau-33448.herokuapp.com/product').then(res =>
             res.json()
         )
     )

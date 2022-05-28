@@ -11,7 +11,7 @@ const MakePayment = () => {
     const [order, setOrder] = useState([])
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://limitless-plateau-33448.herokuapp.com/order/${id}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json",

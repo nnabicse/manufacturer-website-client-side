@@ -19,7 +19,7 @@ const ManageUser = ({ currentUser, index, refetch }) => {
             confirmButtonText: 'Yes, Make Admin!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/alluser/admin/${currentUser.email}`, {
+                fetch(`https://limitless-plateau-33448.herokuapp.com/alluser/admin/${currentUser.email}`, {
                     method: "PATCH",
                     headers: {
                         "content-type": "application/json",

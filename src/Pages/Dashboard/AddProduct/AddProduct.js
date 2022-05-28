@@ -31,8 +31,9 @@ const AddProduct = () => {
             price: price,
             image: image
         }
+        event.target.reset()
 
-        fetch("http://localhost:5000/product", {
+        fetch("https://limitless-plateau-33448.herokuapp.com/product", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

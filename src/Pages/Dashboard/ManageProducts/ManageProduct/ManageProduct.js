@@ -15,7 +15,7 @@ const ManageProduct = ({ product, index }) => {
             confirmButtonText: 'Yes'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/product/${product._id}`, {
+                fetch(`https://limitless-plateau-33448.herokuapp.com/product/${product._id}`, {
                     method: "DELETE",
                     headers: {
                         authorization: `Bearer ${localStorage.getItem("accessToken")}`

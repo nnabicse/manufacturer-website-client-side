@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const ReviewsHome = () => {
     const navigate = useNavigate();
     const { isLoading, error, data } = useQuery('reviews', () =>
-        fetch('http://localhost:5000/review', {
+        fetch('https://limitless-plateau-33448.herokuapp.com/review', {
             headers: {
                 "content-type": "application/json",
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`

@@ -10,8 +10,9 @@ const AddReview = () => {
     const [user, loading] = useAuthState(auth)
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
+        console.log(data)
         const reviewData = { ...data, name: user.displayName, email: user.email }
-        fetch("http://localhost:5000/review", {
+        fetch("https://limitless-plateau-33448.herokuapp.com/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
