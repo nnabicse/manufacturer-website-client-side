@@ -1,0 +1,17 @@
+.message-button {
+    font-weight: 800;
+    color: blue;
+    font-size: larger;
+
+}
+
+.message-details-container {
+    margin-top: 50px;
+}
+
+.messaage-container {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}

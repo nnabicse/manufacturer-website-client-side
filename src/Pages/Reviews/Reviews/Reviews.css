@@ -1,0 +1,57 @@
+.all-reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    width: 75%;
+    margin: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .all-reviews-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .all-reviews-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .all-reviews-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        width: 75%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .all-reviews-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 75%;
+        grid-gap: 40px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .all-reviews-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 75%;
+        grid-gap: 40px;
+    }
+}

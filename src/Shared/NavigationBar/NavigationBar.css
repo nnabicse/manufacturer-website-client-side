@@ -1,0 +1,15 @@
+.nav-item {
+    color: black;
+    font-weight: 800;
+    font-size: large;
+}
+
+.role {
+    font-size: xx-small;
+}
+
+@media only screen and (max-width: 400px) {
+    .role {
+        display: none;
+    }
+}

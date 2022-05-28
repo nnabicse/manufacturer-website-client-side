@@ -1,0 +1,116 @@
+.dashboard-content-container {
+    width: 75%;
+    margin: auto;
+}
+
+.dashboard-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+.admin-level-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .dashboard-content-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .dashboard-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10px;
+        grid-gap: 10px;
+    }
+
+    .admin-level-buttons {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .dashboard-content-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .dashboard-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10px;
+        grid-gap: 10px;
+    }
+
+    .admin-level-buttons {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .dashboard-content-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .dashboard-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .admin-level-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .dashboard-content-container {
+        width: 75%;
+        margin: auto;
+    }
+
+    .dashboard-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .admin-level-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .dashboard-content-container {
+        width: 75%;
+        margin: auto;
+    }
+
+    .dashboard-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .admin-level-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

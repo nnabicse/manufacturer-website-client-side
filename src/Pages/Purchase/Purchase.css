@@ -1,0 +1,97 @@
+.purchase-details-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+
+}
+
+.info {
+    box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
+    padding: 10px;
+}
+
+.purchase-detail-all-item-container {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+.purchase-image-container {
+    text-align: center;
+}
+
+.purchase-container {
+    width: 50%;
+    margin: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .purchase-details-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .purchase-container {
+        width: 100%;
+        padding: 10px;
+
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .purchase-details-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .purchase-container {
+        width: 100%;
+        padding: 10px;
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .purchase-details-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .purchase-container {
+        width: 75%;
+        margin: auto;
+
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .purchase-details-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .purchase-container {
+        width: 50%;
+        margin: auto;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .purchase-details-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .purchase-container {
+        width: 50%;
+        margin: auto;
+
+    }
+}
