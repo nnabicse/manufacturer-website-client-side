@@ -19,7 +19,7 @@ const MyOrder = ({ myOrder, index, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/order/${_id}`, {
+                fetch(`https://fathomless-sands-04290.herokuapp.com/order/${_id}`, {
                     method: "DELETE",
                     headers: {
                         authorization: `Bearer ${localStorage.getItem("accessToken")} `

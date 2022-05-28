@@ -32,7 +32,7 @@ const AddProduct = () => {
             image: image
         }
 
-        fetch("http://localhost:5000/product", {
+        fetch("https://fathomless-sands-04290.herokuapp.com/product", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

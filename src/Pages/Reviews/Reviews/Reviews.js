@@ -6,7 +6,7 @@ import './Reviews.css'
 
 const Reviews = () => {
     const { isLoading, error, data } = useQuery('reviews', () =>
-        fetch('http://localhost:5000/review').then(res =>
+        fetch('https://fathomless-sands-04290.herokuapp.com/review').then(res =>
             res.json()
         )
     )

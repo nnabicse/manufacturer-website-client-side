@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [user, loading] = useAuthState(auth)
 
     const { isLoading, error, data: myOrders, refetch } = useQuery("myOrders", () =>
-        fetch(`http://localhost:5000/order?buyer=${user.email}`, {
+        fetch(`https://fathomless-sands-04290.herokuapp.com/order?buyer=${user.email}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json",

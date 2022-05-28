@@ -19,7 +19,7 @@ const ManageUser = ({ currentUser, index, refetch }) => {
             confirmButtonText: 'Yes, Make Admin!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/alluser/admin/${currentUser.email}`, {
+                fetch(`https://fathomless-sands-04290.herokuapp.com/alluser/admin/${currentUser.email}`, {
                     method: "PATCH",
                     headers: {
                         "content-type": "application/json",
@@ -58,7 +58,7 @@ const ManageUser = ({ currentUser, index, refetch }) => {
     //         confirmButtonText: 'Yes, delete it!'
     //     }).then((result) => {
     //         if (result.isConfirmed) {
-    //             fetch(`http://localhost:5000/alluser/${user.email}`, {
+    //             fetch(`https://fathomless-sands-04290.herokuapp.com/alluser/${user.email}`, {
     //                 method: "DELETE",
     //                 headers: {
     //                     "content-type": "application/json",

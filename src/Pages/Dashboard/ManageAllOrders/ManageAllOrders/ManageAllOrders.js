@@ -6,7 +6,7 @@ import { Table } from 'react-bootstrap';
 import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
 
 const ManageAllOrders = () => {
-    const { data: orders, isLoading, refetch } = useQuery("orders", () => fetch(`http://localhost:5000/allorder`, {
+    const { data: orders, isLoading, refetch } = useQuery("orders", () => fetch(`https://fathomless-sands-04290.herokuapp.com/allorder`, {
         method: "GET",
         headers: {
             "content-type": "application/json",
